@@ -7,15 +7,12 @@ var app = {
             alert(title ? (title + ": " + message) : message);
         }
     },
-<<<<<<< HEAD
-    
+
     renderHomeView: function() {
         $('body').html(this.homeTpl());
         $('.search-key').on('keyup', $.proxy(this.findByName, this));
     },
-=======
->>>>>>> FETCH_HEAD
-
+    
     /*findByName: function() {
         console.log('findByName');
         this.store.findByName($('.search-key').val(), function(employees) {
@@ -38,15 +35,10 @@ var app = {
 
     initialize: function() {
         var self = this;
-<<<<<<< HEAD
         this.homeTpl = Handlebars.compile($("#home-tpl").html());
         this.employeeLiTpl = Handlebars.compile($("#employee-li-tpl").html());
         this.store = new WebSqlStore(function() {
             self.renderHomeView();
-=======
-        this.store = new WebSqlStore(function() {
-            self.showAlert('Store Initialized', 'Info');
->>>>>>> FETCH_HEAD
         });
         $('.search-key').on('keyup', $.proxy(this.findByName, this));
     }
